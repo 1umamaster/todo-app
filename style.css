@@ -1,1 +1,164 @@
+/* ====== Base styles ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
 
+body {
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* ====== Header ====== */
+h1 {
+  margin-bottom: 30px;
+  color: #f4f4f4;
+}
+
+/* ====== Container ====== */
+.todo-container {
+  background: #333;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ====== Input ====== */
+.todo-container input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+.todo-container input:focus {
+  border-color: #0078d4;
+}
+
+/* ====== Buttons (Add & general) ====== */
+.todo-container button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.todo-container button:hover {
+  background-color: #005fa3;
+}
+
+/* ====== Task list ====== */
+#task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #222;
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+
+.task-item span {
+  flex: 1;
+  font-size: 15px;
+}
+
+.task-item button {
+  background: none;
+  border: none;
+  color: #d11a2a;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ====== Completed task ====== */
+.completed span {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.completed {
+  background-color: #333;
+  transition: background 0.3s ease;
+}
+
+/* ====== Filters ====== */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+
+.filters .filter-btn {
+  flex: 1;
+  padding: 8px 0;
+  border: 1px solid #0078d4;
+  background: #333;
+  color: #0078d4;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filters .filter-btn:hover {
+  background: #e6f0fa;
+}
+
+.filter-btn.active {
+  background: #0078d4;
+  color: white;
+}
+
+/* ====== Task footer ====== */
+.task-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #777;
+}
+
+#clear-completed-btn {
+  padding: 5px 10px;
+  font-size: 13px;
+  background: #d11a2a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#clear-completed-btn:hover {
+  background: #a50f1b;
+}
